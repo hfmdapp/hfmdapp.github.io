@@ -10,7 +10,7 @@ export default function Form() {
 			description: description.value,
 		};
 		const response = await fetch(
-			'https://medu.app/spinoff/api/support/request',
+			'https://hfmd.medu.app/api/support/request',
 			{
 				method: 'POST',
 				headers: {
@@ -20,7 +20,6 @@ export default function Form() {
 				body: JSON.stringify(data),
 			}
 		);
-		console.log(response);
 
 		if (response.ok) {
 			swal('สำเร็จ!', 'เราได้บันทึกข้อมูลของคุณไว้แล้ว', 'success');
