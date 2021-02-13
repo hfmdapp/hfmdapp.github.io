@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Navbar() {
 	return (
 		<nav className='bg-gray-800'>
@@ -45,37 +47,25 @@ export default function Navbar() {
 					</div>
 					<div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
 						<div className='flex-shrink-0 flex items-center'>
-							<h1 className="text-white block px-3 py-2 text-base font-medium">HFMD Support Center</h1>
+							<Link
+							href="/">
+							<a
+								className='text-white block px-3 py-2 text-base font-medium'
+							>
+								HFMD Support Center
+							</a>
+							</Link>
 						</div>
 					</div>
+					<div class='ml-3 relative'>
+						<Link href="/privacy-policy">
+						<a
+							class='text-white flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white'
+						>
+							นโยบายความเป็นส่วนตัว
+						</a>
+						</Link>
 				</div>
-			</div>
-			<div className='hidden sm:hidden'>
-				<div className='px-2 pt-2 pb-3 space-y-1'>
-					<a
-						href='#'
-						className='bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
-					>
-						Dashboard
-					</a>
-					<a
-						href='#'
-						className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-					>
-						Team
-					</a>
-					<a
-						href='#'
-						className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-					>
-						Projects
-					</a>
-					<a
-						href='#'
-						className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-					>
-						Calendar
-					</a>
 				</div>
 			</div>
 		</nav>
